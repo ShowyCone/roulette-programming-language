@@ -1,0 +1,103 @@
+html {
+background-color: #323330;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: .5s;
+  transform: translateZ(-206.5px) rotateY(0deg);
+}
+
+.carousel__cell {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  left: 10px;
+  top: 10px;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
+  outline: #000 2px solid;
+}
+
+.carousel__cell *:nth-child(1) {
+  margin: 35px 0;
+  font-size: 4em;
+  font-weight: 600;
+}
+
+.carousel__cell *:nth-child(2) {
+  font-weight: 600;
+}
+
+.carousel__cell:nth-child(1) {
+  transform: rotateY(0deg) translateZ(206.5px);
+  background-color: #F0DB4F;
+  color: #323330;
+}
+.carousel__cell:nth-child(2) {
+  transform: rotateY(72deg) translateZ(206.5px);
+  background-color: #4B8BBE;
+  color: #FFD43B;
+}
+.carousel__cell:nth-child(3) {
+  transform: rotateY(144deg) translateZ(206.5px);
+  background-color: #0059B3;
+  color: #ffffff;
+}
+.carousel__cell:nth-child(4) {
+  transform: rotateY(216deg) translateZ(206.5px);
+  background-color: #f89820;
+  color: #5382a1;
+}
+.carousel__cell:nth-child(5) {
+  transform: rotateY(288deg) translateZ(206.5px);
+  background-color: #474A8A;
+  color: #787CB5;
+}
+
+.options {
+  margin-top: 50px;
+  display: flex;
+}
+
+.options input {
+  font-size: 1.5em;
+  width: 50px;
+  font-weight: 700;
+  height: 50px;
+  margin: 0 12px;
+  text-align: center;
+}
+
+.options button {
+  font-size: 1.2em;
+  font-weight: 700;
+  width: 100px;
+}
